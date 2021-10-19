@@ -28,14 +28,14 @@ void * reader(void *arg){
     }
 }
 
-ThreadQueue q = ThreadQueue(10);
+ThreadQueue q = ThreadQueue(2);
 void * queue_worker(void *arg){
     while (true)
     {
         int test = random();
         q.push(test);
         printf("push %d \n", test);
-        sleep(1);
+        sleep(2);
     }
 }
 
